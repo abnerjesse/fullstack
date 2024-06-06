@@ -1,1 +1,62 @@
 @charset "UTF-8";
+
+:root {
+    --cor0: rgba(242, 171, 145, 0.2);
+    --cor1: #F2AB91;
+    --cor2: #5CB9F2;
+    --cor3: #3D90D9;
+    --cor4: #03588C;
+    --cor5: #021F59;
+
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+h1 {
+    color: var(--cor5);
+    text-align: center;
+    margin-top: 100px;
+    font-size: 3.1em;
+}
+
+input {
+    display: block;
+    margin: auto;
+    width: 80%;
+    border: 3px solid var(--cor5);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: var(--cor2);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 4px 25px;
+    margin-top: 7px;
+    border: 3px solid var(--cor5);
+}
+
+button:hover {
+    background-color: var(--cor3);
+}
+
+.form {
+    margin: auto;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
