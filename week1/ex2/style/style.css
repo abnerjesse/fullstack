@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+:root {
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-corpo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: var(--fonte-padrao);
+}
+
+header h1 {
+    text-align: center;
+    margin: 40px 0px;
+    color: cadetblue;
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+}
+
+article {
+    padding: 0px 60px 0px 60px;
+}
+
+article h1 {
+    margin-bottom: 40px;
+}
+
+article p {
+    /* margin: 15px 0px; */
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+    font: var(--fonte-corpo);
+}
+
+footer {
+    text-align: right;
+}
+
+.menu {
+    margin: auto;
+    text-align: center;
+}
+
+.imgmenu {
+    width: 700px;
+    height: 250px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.back {
+    width: 50px;
+}
+
+#bdpraia {
+    background-color: blanchedalmond;
+}
+
+#bdjardim {
+    background-color: rgba(144, 238, 144, 0.4);
+}
+
+#bdgruta {
+    background-color: lightskyblue;
+}
