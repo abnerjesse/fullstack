@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h1>Calculadora de Porcentagem</h1>
+            <h3>Quantos por cento?</h3>
+            <div>
+                <input type="number" placeholder="Número 1" id="num1">
+                <input type="number" placeholder="Número 2" id="num2">
+            </div>
+            <button onclick="percent()">Calcular</button>
+
+        </div>
+    </main>
+</body>
+
+<script>
+    function percent()  {
+        let n1 = parseFloat(document.getElementById("num1").value)
+        let n2 = parseFloat(document.getElementById("num2").value)
+
+        let result = n1 / (n2 / 100)
+
+        window.alert(n1 + " é " + result + "% de " + n2)
+    }
+</script>
+</html>

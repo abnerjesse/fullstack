@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+:root {
+  --cor0: #bf1f2c;
+  --cor1: #243773;
+  --cor2: #f2b441;
+  --cor3: #f29a2e;
+  --cor4: #bf785e;
+}
+
+/* * {
+  margin: 0px;
+  padding: 0px;
+} */
+
+body {
+  background-color: var(--cor2);
+  font-family: sans-serif;
+}
+
+.formulario {
+  background-color: var(--cor3);
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0px 1px 10px -5px rgb(0, 0, 0);
+}
+
+.formulario input, .formulario select {
+    display: block;
+    padding: 10px 10px;
+    border: 1px solid var(--cor0);
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Considera padding e borda dentro da largura */
+    border-radius: 3px;
+  }
+  
+  .formulario button {
+    display: block;
+    padding: 8px 25px;
+    background-color: var(--cor0);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .formulario button:hover {
+    cursor: pointer;
+    background-color: var(--cor1);
+  }
+  
+  h1 {
+    margin-top: 50px;
+    text-align: center;
+    color:var(--cor0);
+    font-size: 50px;
+  }
+
+  fieldset {
+    padding: 20px 10px;
+    border: 1px solid var(--cor4);
+    margin-top: 10px;
+    border-radius: 3px;
+  }
+  
+  legend {
+    color: var(--cor1);
+    margin: auto;
+  }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h1>Calculadora de BTU</h1>
+            <div>
+                <label for="num1">Área do Cômodo (m<sup>2</sup>)</label>
+                <input type="number" id="num1">
+            </div>
+            <div>
+                <label for="num2">Quantidade de Pessoas no Cômodo</label>
+                <input type="number" id="num2">
+            </div>
+            <div>
+                <label for="num3">Quantidade de Eletroeletrônicos</label>
+                <input type="number" id="num3">
+            </div>
+            <button onclick="btu()">Calcular</button>
+
+        </div>
+    </main>
+</body>
+
+<script>
+    function btu()  {
+        let n1 = parseFloat(document.getElementById("num1").value)
+        let n2 = parseFloat(document.getElementById("num2").value)
+        let n3 = parseFloat(document.getElementById("num3").value)
+
+        let squareMeters = n1 * 600
+        let people = (n2 - 1) * 600
+        let electronics = n3 * 600
+
+        let result = squareMeters + people + electronics
+
+        window.alert("A potência do ar deve ser de " + result + " BTU.")
+    }
+</script>
+</html>

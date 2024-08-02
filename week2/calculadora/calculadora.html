@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h1>Calculadora High Tech</h1>
+            <div>
+                <input type="number" placeholder="Número 1" id="num1">
+            </div>
+            <div>
+                <input type="number" placeholder="Número 2" id="num2">
+            </div>
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="times()">*</button>
+            <button onclick="div()">/</button>
+        </div>
+    </main>
+</body>
+
+<script>
+    function add()  {
+        let n1String = document.getElementById("num1").value
+        let n2 = parseFloat(document.getElementById("num2").value)
+
+        let n1 = parseFloat(n1String)
+
+        let result = n1 + n2
+
+        window.alert("O resultado da soma é: " + result)
+    }
+    function sub()  {
+        let n1 = parseFloat(document.getElementById("num1").value)
+        let n2 = parseFloat(document.getElementById("num2").value)
+
+        let result = n1 - n2
+
+        window.alert("O resultado da subtração é: " + result)
+    }
+    function times()  {
+        let n1 = parseFloat(document.getElementById("num1").value)
+        let n2 = parseFloat(document.getElementById("num2").value)
+
+        let result = n1 * n2
+
+        window.alert("O resultado da multiplicação é: " + result)
+    }
+    function div()  {
+        let n1 = parseFloat(document.getElementById("num1").value)
+        let n2 = parseFloat(document.getElementById("num2").value)
+
+        let result = n1 / n2
+
+        window.alert("O resultado da divisão é: " + result)
+    }
+</script>
+</html>

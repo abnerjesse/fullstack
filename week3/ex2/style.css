@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+:root {
+  --cor0: #c7ffed;
+  --cor1: #d8ffdb;
+  --cor2: #008f8c;
+  --cor3: #015958;
+  --cor4: #023535;
+}
+
+/* * {
+  margin: 0px;
+  padding: 0px;
+} */
+
+body {
+  background-color: var(--cor0);
+  font-family: sans-serif;
+}
+
+.formulario {
+  background-color: var(--cor2);
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px -5px rgb(0, 0, 0);
+  margin-top: 50px;
+  margin: auto;
+  padding: 20px;
+  width: 400px;
+}
+
+.formulario input {
+  border-radius: 3px;
+  border: 1px solid var(--cor4);
+  box-sizing: border-box; /* Considera padding e borda dentro da largura */
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+.formulario button {
+  background-color: var(--cor3);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  display: block;
+  margin-top: 20px;
+  margin: auto;
+  padding: 8px 25px;
+}
+
+.formulario button:hover {
+  background-color: var(--cor1);
+  color: var(--cor4);
+  cursor: pointer;
+}
+
+header {
+  color: var(--cor4);
+  font-size: 35px;
+  margin-top: 50px;
+  text-align: center;
+}
