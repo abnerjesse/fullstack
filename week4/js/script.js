@@ -2,7 +2,10 @@ let listaCompras = []
 
 function adicionarItem() {
     let item = document.getElementById("item").value
-    listaCompras[listaCompras.length] = item
+    
+    // listaCompras[listaCompras.length] = item
+    listaCompras.push(item)
+
     limpar()
     imprimir()
 }
@@ -12,5 +15,5 @@ function limpar() {
 }
 
 function imprimir() {
-    document.getElementById("lista").innerText = listaCompras
+    document.getElementById("lista").innerText = listaCompras.join(" - ")
 }
