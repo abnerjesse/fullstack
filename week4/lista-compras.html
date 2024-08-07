@@ -11,13 +11,31 @@
     <div class="card">
         <h1>Lista de Compras</h1>
         
-        <div>
-            <input type="text" name="item" id="item" placeholder="Insira o item da lista">
-        </div>
-        
-        <div>
-            <button onclick="adicionarItem()">Adicionar</button>
-        </div>
+        <fieldset class="area-adicionar">
+            <legend>Adicionar</legend>
+
+            <div>
+                <input type="text" name="adicionarItem" id="adicionarItem" placeholder="Insira um item na lista">
+            </div>
+            
+            <div>
+                <button onclick="adicionarItem()">Adicionar</button>
+                <button onclick="limparA()">Limpar</button>
+            </div>
+        </fieldset>
+
+        <fieldset class="area-remover">
+            <legend>Remover</legend>
+            
+            <div>
+                <input type="text" name="removerItem" id="removerItem" placeholder="Remova um item da lista">
+            </div>
+
+            <div>
+                <button onclick="removerItem()">Remover</button>
+                <button onclick="limparR()">Limpar</button>
+            </div>
+        </fieldset>
     </div>
 
     <div class="card">

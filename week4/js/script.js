@@ -1,24 +1,34 @@
 let listaCompras = []
 
 function adicionarItem() {
-    let item = document.getElementById("item").value
-
-    // listaCompras[listaCompras.length] = item
-
-    // hasItem(item)?listaCompras.push(item):alert("Por favor, informe um item para ser adicionado na lista de compras!")
+    let item = document.getElementById("adicionarItem").value
 
     if (!hasItem(item)) {
         alert("Por favor, informe um item para ser adicionado na lista de compras!")
     } else {
         if (checkItem(item)) {
             listaCompras.push(item)
-            limpar()
             imprimir()
         } else {
             alert("Item já adicionado, por favor informe outro item para ser adicionado na lista de compras!")
-            limpar()
         }
     }
+    limparA()
+}
+
+function removerItem() {
+    let itemRemover = document.getElementById("removerItem").value
+
+    let indiceRemover = listaCompras.indexOf(itemRemover)
+
+    if (checkItem(itemRemover)) {
+        alert("Item não encontrado!")
+    } else {
+        listaCompras.splice(indiceRemover, 1)
+        alert("Item removido!")
+        imprimir()
+    }
+    limparR()
 }
 
 function checkItem(it) {
@@ -29,8 +39,12 @@ function hasItem(it) {
     return (it != "")
 }
 
-function limpar() {
-    document.getElementById("item").value = ""
+function limparA() {
+    document.getElementById("adicionarItem").value = ""
+}
+
+function limparR() {
+    document.getElementById("removerItem").value = ""
 }
 
 function imprimir() {
