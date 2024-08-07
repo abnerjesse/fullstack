@@ -4,7 +4,11 @@ function adicionarItem() {
     let item = document.getElementById("item").value
     
     // listaCompras[listaCompras.length] = item
-    listaCompras.push(item)
+    if (item == "") {
+        alert("Por favor, informe um item para ser adicionado na lista de compras!")
+    } else {
+        listaCompras.push(item)
+    }
 
     limpar()
     imprimir()
