@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+    font-family: sans-serif;
+}
+
+.card {
+    width: 40%;
+    margin: 50px auto;
+    background-color: lightsteelblue;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid darkblue;
+
+}
+
+.card h1 {
+    font-weight: 400;
+    color: blue;
+}
+.card div {
+    margin: 20px 0px;
+}
+
+.card input {
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid darkblue;
+    background-color: lightsteelblue;
+}
+
+.card button {
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: white;
+}
