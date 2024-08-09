@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boletim</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Controle de Notas</h1>
+      <input type="number" id="notaInput" placeholder="Digite a nota" />
+      <button onclick="adicionarNota()">Adicionar Nota</button>
+
+      <div id="resultados">
+        <p id="notas">Notas: -</p>
+        <p id="maiorNota">Maior Nota: -</p>
+        <p id="menorNota">Menor Nota: -</p>
+        <p id="mediaNota">Média: -</p>
+        <p id="situacaoNota" class="situacao">Situação: -</p>
+      </div>
+    </div>
+  </body>
+</html>
