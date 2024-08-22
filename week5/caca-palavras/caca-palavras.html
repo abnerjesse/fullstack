@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caça Palavras</title>
     <script src="caca-palavras.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Caça Palavras</h1>
-    <textarea placeholder="Digite a frase aqui" id="frase" cols="30" rows="10"></textarea>
+    <!-- <textarea placeholder="Digite a frase aqui" id="frase" cols="30" rows="10"></textarea>
     <input type="text" placeholder="Procure uma palavra" id="palavra">
-    <button onclick="buscarPalavra()">Buscar</button>
-    <div class="resultado"></div>
-</body>
+    <button onclick="buscarPalavra()">Buscar</button> -->
+
+    <div class="row">
+      <div class="column" style="background-color: #aaa">
+        <textarea
+          placeholder="Digite a frase aqui"
+          id="frase"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="column" style="background-color: #bbb">
+        <input type="text" placeholder="Procure uma palavra" id="palavra" class="center"/>
+        <button onclick="buscarPalavra()" class="center">Buscar</button>
+      </div>
+    </div>
+    <div class="resultado column"></div>
+  </body>
 </html>
