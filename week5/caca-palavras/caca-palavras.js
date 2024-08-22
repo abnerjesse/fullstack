@@ -2,7 +2,7 @@ function buscarPalavra() {
     let frase = document.getElementById("frase").value
     let palavra = document.getElementById("palavra").value
 
-    console.log(frase, palavra)
+    let divResultado = document.querySelector(".resultado")
     
-    alert(frase.includes(palavra) ? palavra : "Palavra não encontrada")
+    return (frase.includes(palavra) ? divResultado.innerText="Palavra encontrada!" : divResultado.innerText="Palavra não encontrada")
 }
