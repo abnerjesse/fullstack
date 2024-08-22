@@ -32,19 +32,6 @@ function adicionarDespesa() {
 }
 
 function atualizarBalanco() {
-    // if (entradas.length === 0) {
-    //     document.getElementById('receitas').textContent = 'Total das receitas: -';
-    //     document.getElementById('situacaoBalanco').textContent = 'Balanço: -';
-    //     document.getElementById('situacaoBalanco').className = 'situacao';
-    //     return;
-    // }
-    // if (saidas.length === 0) {
-    //     document.getElementById('despesas').textContent = 'Total das despesas: -';
-    //     document.getElementById('situacaoBalanco').textContent = 'Balanço: -';
-    //     document.getElementById('situacaoBalanco').className = 'situacao';
-    //     return;
-    // }
-
     if (entradas.length === 0 && saidas.length === 0) {
         document.getElementById('receitas').textContent = 'Total das receitas: -';
         document.getElementById('despesas').textContent = 'Total das despesas: -';
@@ -57,20 +44,14 @@ function atualizarBalanco() {
     let outcome = saidas.reduce((acc, curr) => acc + curr, 0)
     let balanco = income - outcome
 
-    let cor;
 
-    if (balanco == 0) {
-        cor = 'black';
-    } else if (balanco < 0) {
-        cor = 'red';
-    } else {
-        cor = 'green';
-    }
+    let corReceita = income === 0 ? 'black' : 'green';
+    let corDespesa = outcome === 0 ? 'black' : 'red';
+    let corBalanco = balanco === 0 ? 'black' : (balanco < 0 ? 'red' : 'green');
 
-    document.getElementById('receitas').textContent = `Total das despesas: R$ ${income.toFixed(1)}`;
-    // document.getElementById('receitas').className = `situacao ${cor}`;
-    document.getElementById('despesas').textContent = `Total das despesas: R$ ${outcome.toFixed(1)}`;
-    // document.getElementById('despesas').className = `situacao ${cor}`;
-    document.getElementById('situacaoBalanco').textContent = `Balanço: R$ ${balanco.toFixed(1)}`;
-    document.getElementById('situacaoBalanco').className = `situacao ${cor}`;
+    // Atualizar o HTML com span para colorir os valores
+    document.getElementById('receitas').innerHTML = `Total das receitas: R$ <span class="${corReceita}">${income.toFixed(1)}</span>`;
+    document.getElementById('despesas').innerHTML = `Total das despesas: R$ <span class="${corDespesa}">${outcome.toFixed(1)}</span>`;
+    document.getElementById('situacaoBalanco').innerHTML = `Balanço: R$ <span class="${corBalanco}">${balanco.toFixed(1)}</span>`;
+    document.getElementById('situacaoBalanco').className = `situacao ${corBalanco}`;
 }
