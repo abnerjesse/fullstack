@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Contas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="finance.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Controle de Contas</h1>
+
+      <fieldset class="in">
+        <legend>Receita</legend>
+
+        <input
+          type="number"
+          name="adicionarReceita"
+          id="adicionarReceita"
+          placeholder="Valor da receita"
+        />
+        <button onclick="adicionarReceita()">Adicionar</button>
+      </fieldset>
+
+      <fieldset class="out">
+        <legend>Despesa</legend>
+
+        <input
+          type="number"
+          name="adicionarDespesa"
+          id="adicionarDespesa"
+          placeholder="Valor da despesa"
+        />
+        <button onclick="adicionarDespesa()">Adicionar</button>
+      </fieldset>
+
+      <div id="balanco">
+        <p id="receitas">Total das receitas: -</p>
+        <p id="despesas">Total das despesas: -</p>
+        <p id="situacaoBalanco" class="situacao">Balanço: -</p>
+      </div>
+    </div>
+  </body>
+</html>
