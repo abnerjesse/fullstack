@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Replacer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="replace.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Substituidor de Palavras</h1>
+        <textarea placeholder="Digite aqui a sua frase" name="phrase" id="phrase" cols="50" rows="10"></textarea>
+        <input type="text" placeholder="Digite aqui a palavra de busca" name="wordIn" id="wordIn">
+        <input type="text" placeholder="Digite aqui a palavra substituta" name="wordOut" id="wordOut">
+        <button onclick="replaceWord()">Substituir</button>
+        <div id="resultPhrase" >A nova frase aparecerá aqui!</div>
+    </div>
+</body>
+</html>
