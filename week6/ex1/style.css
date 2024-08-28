@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 40%;
+  margin: 50px auto;
+  background-color: lightsteelblue;
+  padding: 40px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid darkblue;
+}
+
+.container h1 {
+  font-weight: 400;
+  color: blue;
+}
+
+.container h2 {
+  font-weight: 300;
+  color: blue;
+}
+
+.container div {
+  margin: 20px 0px;
+}
+
+.container input {
+  width: 60%;
+  padding: 5px;
+  border: none;
+  margin-top: 20px;
+  border-bottom: 1px solid darkblue;
+  background-color: lightsteelblue;
+}
+
+.container button {
+  /* display: block; */
+  margin: auto;
+  margin-left: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.container button:hover {
+  cursor: pointer;
+  background-color: cornflowerblue;
+  color: white;
+}
