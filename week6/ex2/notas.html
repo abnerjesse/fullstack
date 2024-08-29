@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Situação do Aluno</h1>
+        <div>
+            <input type="number" name="newNote" id="newNote" placeholder="Nova nota" />
+            <button onclick="adicionarNota()">Adicionar</button>
+        </div>
+        <div>
+            <button onclick="goToSubs()">Finalizar</button>
+            <button onclick="limparNotas()">Limpar Notas</button>
+        </div>
+        <div>
+            <fieldset>
+                <div id="resultados">
+                    <p id="notas">Notas: -</p>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
