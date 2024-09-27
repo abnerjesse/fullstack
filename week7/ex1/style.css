@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: cornflowerblue;
+  margin-top: 80px;
+  text-transform: uppercase;
+}
+
+.foodPanel {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input {
+  border: 1px solid cornflowerblue;
+  border-radius: 3px;
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  width: 20%;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+label{
+    display: flex;
+    align-items: center; /* Alinha o checkbox e o texto verticalmente */
+    gap: 5px; /* Espaço entre o checkbox e o texto */
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+.checkbox {
+  width: 16px; /* Define a largura do checkbox */
+  height: 16px; /* Define a altura do checkbox */
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  background-color: cornflowerblue;
+  color: whitesmoke;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+.produto {
+  background-color: white;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.produto img {
+  width: 250px;
+}
+
+.produto .produtoDetalhe {
+  padding: 10px;
+  text-align: center;
+}
+
+.produtoTitulo {
+  font-weight: bold;
+}
+
+.produtoValor {
+  font-size: 15px;
+  color: gray;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0px 50px;
+  align-items: flex-start;
+}

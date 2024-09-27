@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="almoco.js"></script>
+</head>
+<body onload="showMenu()">
+    <h1>Encontre seu almoço</h1>
+    <div class="foodPanel">
+        <div><input type="text" name="foodDesc" id="foodDesc" placeholder="Digite aqui a descrição do prato"></div>
+        <div><input type="number" name="foodPrice" id="foodPrice" placeholder="Digite aqui o valor do prato"></div>
+        <div><input type="text" name="foodUrl" id="foodUrl" placeholder="Digite aqui a URL da imagem do prato"></div>
+        <div>
+            <label>
+                <input type="checkbox" name="shipping" id="shipping" class="checkbox">
+                Entrega grátis
+            </label>
+        </div>
+        <div><button onclick="addFood()">Adicionar</button></div>
+        <div><input type="text" name="foodFind" id="foodFind" placeholder="Digite aqui a sua busca"></div>
+        <div>
+            <label>
+                <input type="checkbox" name="freeShipping" id="freeShipping" class="checkbox">
+                Apenas entrega grátis
+            </label>
+        </div>
+        <button onclick="findFood()">Filtrar</button>
+        <button onclick="clearFilter()">Limpar filtros</button>
+    </div>
+    
+    <section id="menu"></section>
+
+</body>
+</html>
