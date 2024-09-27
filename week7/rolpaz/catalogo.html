@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolpaz</title>
+    <link rel="stylesheet" href="style.css">
     <script src="catalogo.js"></script>
 </head>
 <body onload="criaCatalogo()">
     <h1>Rolpaz, tudo em um só lugar!</h1>
     <!-- <button onclick="criaCatalogo()">Carregar catálogo!</button> -->
+     <div class="buscaComp">
+         <input type="search" name="buscarProd" id="buscarProd" placeholder="Busque por um produto">
+         <button onclick="buscarProd()">Buscar</button>
+         <button onclick="limpar()">Limpar</button>
+     </div>
     <section id="catalogo"></section>
 </body>
 </html>
