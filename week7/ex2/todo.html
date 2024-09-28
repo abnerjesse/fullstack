@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="todo.js"></script>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <div class="listPanel">
+        <input type="search" name="task" id="task" placeholder="Digite aqui a tarefa">
+        <button onclick="addTask()">Adicionar</button>
+        <button onclick="findTask()">Buscar</button>
+        <h2>Tarefas Adicionadas</h2>
+        <button onclick="clearSearch()">Limpar Filtro</button>
+        <section id="list"></section>
+    </div>
+</body>
+</html>
