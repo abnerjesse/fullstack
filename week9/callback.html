@@ -1,0 +1,29 @@
+<html>
+  <script>
+    function somar(n1, n2, callback) {
+      let soma = n1 + n2;
+
+      callback(soma);
+    }
+
+    function imprimirAlerta(msg) {
+      alert(msg);
+    }
+    function imprimirConsole(msg) {
+      console.log(msg);
+    }
+    // function multiplicarPorDez(valor) {
+    //   console.log(valor * 10);
+    // }
+    let multiplicarPorDez = function (valor) {
+      console.log(valor * 10);
+    }
+
+    somar(2, 3, imprimirAlerta);
+    somar(2, 4, imprimirConsole);
+    somar(2, 7, multiplicarPorDez);
+    somar(2,6,function (valor) {
+        console.log(valor/2);
+    })
+  </script>
+</html>
