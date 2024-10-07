@@ -1,0 +1,54 @@
+<html>
+  <script>
+    // function divisao(n1, n2, sucesso, erro) {
+    //   if (n2 != 0) {
+    //     let resultado = n1 / n2;
+    //     sucesso(resultado);
+    //   } else {
+    //     erro("Divisão por zero!");
+    //   }
+    // }
+
+    // function sucesso(msg) {
+    //   console.log("O resultado da divisão é: " + msg);
+    // }
+
+    // function erro(msg) {
+    //   console.log(msg);
+    // }
+
+    // divisao(2, 0, sucesso, erro);
+    // divisao(10, 2, sucesso, erro);
+
+    //Eu tenho uma promessa de que eu vou executar uma determinada ação e isso pode dar certo ou não. Se der certo, essa promessa é resolvida e se der errado, ela é rejeitada.
+    function divisao(n1, n2) {
+      return new Promise((resolve, reject) => {
+        if (n2 != 0) {
+          let resultado = n1 / n2;
+          resolve(resultado);
+        } else {
+          reject("Divisão por zero!");
+        }
+      });
+    }
+
+    divisao(10, 5)
+      .then((resultado) => {
+        console.log("O resultado da divisão é: " + resultado);
+      })
+      .catch((erro) => {
+        console.log(erro);
+      });
+
+      divisao(30, 5)
+      .then((percent) => {
+        return percent * 0.1
+      })
+      .then((div) => {
+        console.log("Dez por cento da divisão é: " + div);
+      })
+      .catch((erro) => {
+        console.log(erro);
+      });
+  </script>
+</html>
