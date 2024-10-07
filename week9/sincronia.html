@@ -1,0 +1,53 @@
+<html>
+  <script>
+    function divisao(n1, n2) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (n2 != 0) {
+            let resultado = n1 / n2;
+            resolve(resultado);
+          } else {
+            reject("Divisão por zero!");
+          }
+        }, 3000);
+      });
+    }
+
+    function calcJuros(value) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let resultado = value + (value * 0.1);
+          resolve(resultado)
+        }, 2000);
+      })
+    }
+
+    function printSucesso(value) {
+      console.log(`O valor da divisão com juros de 10% é ${value}`);
+    }
+
+    function printErro(err) {
+      console.log(`Erro: ${err}`);
+    }
+
+    // divisao(30, 5)
+    //   .then((result) => {
+    //     return calcJuros(result);
+    //   })
+    //   .then((juros) => {
+    //     printSucesso(juros);
+    //   })
+    //   .catch((erro) => {
+    //     printErro(erro);
+    //   });
+
+    async function calcular() {
+      let resultado = await divisao(8, 4)
+      let valorComJuros = await calcJuros(resultado)
+
+      console.log(`Resultado: ${valorComJuros}`);
+    }
+
+    calcular()
+  </script>
+</html>
