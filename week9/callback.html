@@ -19,10 +19,11 @@
       console.log(valor * 10);
     }
 
-    somar(2, 3, imprimirAlerta);
-    somar(2, 4, imprimirConsole);
-    somar(2, 7, multiplicarPorDez);
-    somar(2,6,function (valor) {
+    somar(2, 3, imprimirAlerta); //passar por referência
+    somar(2, 4, imprimirConsole); //passar por referência
+    somar(2, 7, multiplicarPorDez); //passar uma variável que tem a referência
+    //passar uma função anônima de maneira implícita
+    somar(2,6,function (valor) { 
         console.log(valor/2);
     })
   </script>
