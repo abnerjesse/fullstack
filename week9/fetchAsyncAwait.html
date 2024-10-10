@@ -19,10 +19,10 @@
       let charsBuffer = "";
       
       for (let index = 0; index < charsFinalSpace.length; index++) {
-        charsBuffer += document.getElementById("lista").innerHTML += `
-        <li>${charsFinalSpace[index].name}</li>
-        `;
+        charsBuffer += `<li>${charsFinalSpace[index].name}</li>`;
       }
+
+      document.getElementById("lista").innerHTML = charsBuffer
     }
   </script>
 </html>
