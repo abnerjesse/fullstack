@@ -1,0 +1,150 @@
+/* Variáveis de cor para facilitar a personalização do tema */
+:root {
+  --primary-color: #4caf50; /* Verde */
+  --secondary-color: #f5f5f5; /* Cinza claro */
+  --accent-color: #333; /* Cinza escuro */
+  --text-color: #fff; /* Texto claro */
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* Garantir que as seções fiquem em uma coluna */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  display: flex;
+  flex-direction: column; /* Coloca as seções em uma coluna */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Estilo do formulário principal */
+.clientForm {
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.clientForm h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Estilo dos inputs e botões dentro do formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: border-color var(--transition-speed);
+}
+
+.form input[type="text"]:focus,
+.form input[type="number"]:focus {
+  border-color: var(--accent-color);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+/* Botão de buscar CEP */
+.btnFindZipCode {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.btnFindZipCode:hover {
+  background-color: #388e3c; /* Um verde mais escuro para o hover */
+  transform: scale(1.05);
+}
+
+/* Botão de salvar cliente */
+.btnSubmitClient {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.btnSubmitClient:hover {
+  background-color: #555; /* Mantendo a cor escura no hover */
+  transform: scale(1.05);
+}
+
+#clientList {
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Seção de clientes submetidos */
+.submitedClients {
+  margin-top: 40px; /* Espaço entre o formulário e a lista de clientes */
+  width: 100%;
+  max-width: 800px;
+}
+
+.submitedClients h2 {
+  font-size: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Estilo para cada card de cliente */
+.clientCard {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem conforme necessário */
+  gap: 10px; /* Espaçamento entre os itens */
+}
+
+.clientCard p {
+  flex: 1 1 30%; /* Cada item ocupa cerca de 30% da largura do card */
+  margin: 0;
+  padding: 5px;
+  text-align: left; /* Alinha o texto à esquerda */
+  display: flex; /* Usa flex para organizar a etiqueta e o valor */
+}
+
+/* Estilo para destacar as etiquetas */
+.label {
+  font-weight: bold;
+  color: var(--primary-color); /* Cor da etiqueta para destaque */
+  margin-right: 5px; /* Espaço entre a etiqueta e o valor */
+}
+
+/* Estilo para os valores */
+.value {
+  color: var(--accent-color); /* Cor do valor para diferenciação */
+}
