@@ -1,0 +1,91 @@
+/* style.css */
+
+/* Reseta margens e padding para uma base consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+  }
+  
+  header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .setTimer, .timerRender {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+    width: 100%;
+    max-width: 400px; /* Limita a largura das seções para telas grandes */
+    text-align: center;
+  }
+  
+  .manageTimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+  
+  input[type="text"]::placeholder {
+    font-size: small;
+    color: #888;
+  }
+  
+  .startTimer {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .startTimer:hover {
+    background-color: #005bb5;
+  }
+  
+  .timerRender {
+    text-align: center;
+  }
+  
+  #showTimer {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
