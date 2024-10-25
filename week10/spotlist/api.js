@@ -1,5 +1,5 @@
-let client_id = 'blablabla' //substituir pela informação correta do app criado no dashbaord do Spotify WebAPI
-let client_secret = 'blabla' //substituir pela informação correta do app criado no dashbaord do Spotify WebAPI
+export let client_id = '1234' //dado sensível, app criado no dashbaord do Spotify WebAPI
+let client_secret = '1234' //dado sensível, app criado no dashbaord do Spotify WebAPI
 let authorizationCode
 let user
 let refreshToken
