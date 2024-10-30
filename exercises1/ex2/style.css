@@ -1,0 +1,82 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo da página */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    color: #333;
+  }
+  
+  /* Container da Tabela */
+  table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+  }
+  
+  /* Cabeçalho da Tabela */
+  thead {
+    background-color: #6B80BF;
+    color: #fff;
+  }
+  
+  th {
+    padding: 1rem;
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  /* Corpo da Tabela */
+  tbody tr {
+    border-bottom: 1px solid #f0f4f8;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Imagens de Foto e Ação */
+  td img {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  td img:hover {
+    transform: scale(1.1);
+  }
+  
+  td:last-child img {
+    margin-right: 8px;
+  }
+  
+  /* Efeito Hover na Linha */
+  tbody tr:hover {
+    background-color: #B6F2BF;
+    color: #2E838C;
+  }
