@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo da página */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Seção de Cadastro de Convidados */
+section.guestForm {
+  background-color: #6b80bf;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.guestForm h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #b6f2bf;
+  text-align: center;
+}
+
+.guestForm label {
+  align-self: flex-start;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.guestForm input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Botão de Adicionar */
+button.btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #b6f2bf;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e838c;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #a1e2ab;
+}
+
+/* Seção da Lista de Convidados */
+section.guestList {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.guestList h2 {
+  font-size: 1.5rem;
+  color: #6b80bf;
+  margin-bottom: 1rem;
+}
+
+/* Lista de Convidados */
+.printGuestList {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.printGuestList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.printGuestList li {
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.printGuestList li:last-child {
+  border-bottom: none;
+}
+
+/* Efeito Hover nos Itens da Lista */
+.printGuestList li:hover {
+  background-color: #b6f2bf;
+  color: #2e838c;
+}
