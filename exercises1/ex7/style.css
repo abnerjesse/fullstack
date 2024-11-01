@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo da página */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f3f6f9;
+    color: #333;
+  }
+  
+  /* Seção de Formulário */
+  section.gradesForm {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  section.gradesForm h1 {
+    font-size: 2rem;
+    color: #4a5aef;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Container de Inputs */
+  .input_data {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input_data div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input_data label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input_data input[type="number"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  /* Botão de Verificar Situação */
+  button.btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #4a5aef;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btn:hover {
+    background-color: #3949a3;
+  }
+  
+  /* Exibição do Status do Aluno */
+  section.studentStatus {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  section.studentStatus p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  section.studentStatus p[style*="color: green"] {
+    color: #4CAF50; /* Verde para aprovado */
+  }
+  
+  section.studentStatus p[style*="color: yellow"] {
+    color: #FFC107; /* Amarelo para prova final */
+  }
+  
+  section.studentStatus p[style*="color: red"] {
+    color: #f44336; /* Vermelho para reprovado */
+  }
