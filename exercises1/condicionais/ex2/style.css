@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* Estilo Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+h1 {
+  color: #3b8ea5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Seção de entrada */
+.input {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_group label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input_group input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #3b8ea5;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input_group input:focus {
+  border-color: #2e5a6a;
+}
+
+/* Botão */
+button.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b8ea5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button.btn:hover {
+  background-color: #2e5a6a;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .input {
+    padding: 20px;
+    width: 100%;
+  }
+
+  button.btn {
+    font-size: 1rem;
+  }
+}
