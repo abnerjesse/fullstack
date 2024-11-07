@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="guestlist.js"></script>
+  </head>
+  <body>
+    <section class="form">
+      <div class="input_container">
+        <h1>Cadastro de Convidados</h1>
+        <div class="input_group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="input_group">
+          <label for="age">Idade</label>
+          <input type="number" id="age" name="age" />
+        </div>
+        <div class="input_group">
+          <span>Sexo:</span>
+          <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="Masculino" />
+            <label for="male">Masculino</label>
+            <input type="radio" id="female" name="gender" value="Feminino" />
+            <label for="female">Feminino</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn" id="bntAddGuest">Adicionar</button>
+    </section>
+    <section class="output_container">
+      <h2>Convidados Cadastrados</h2>
+      <table class="guestTable" id="guestList">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </body>
+</html>
