@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* Estilo Global */
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .form,
+  .output_container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  table.guestTable td,
+  table.guestTable th {
+    padding: 10px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Cabeçalhos */
+h1,
+h2 {
+  text-align: center;
+  color: #2e838c;
+  margin-bottom: 20px;
+}
+
+/* Formulário de Cadastro */
+.form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_group label {
+  font-weight: bold;
+  color: #6b80bf;
+}
+
+.input_group input[type="text"],
+.input_group input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #6b80bf;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.input_group input[type="text"]:focus,
+.input_group input[type="number"]:focus {
+  border-color: #2e838c;
+  outline: 2px solid #2e838c;
+}
+
+/* Estilo dos inputs radio */
+.input_group span {
+  font-weight: bold;
+  color: #6b80bf;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.input_group input[type="radio"] {
+  accent-color: #2e838c;
+  transform: scale(1.2);
+}
+
+/* Botão Adicionar */
+button.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2e838c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+button.btn:hover {
+  background-color: #6b80bf;
+}
+
+/* Tabelas */
+.output_container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+table.guestTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+table.guestTable th,
+table.guestTable td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.guestTable th {
+  background-color: #6b80bf;
+  color: white;
+}
+
+table.guestTable td {
+  color: #333;
+}
+
+table.guestTable td img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+table.guestTable td img:hover {
+  filter: brightness(1.2);
+}
+
+table.guestTable tr:hover {
+  background-color: #b6f2bf;
+}
+
+/* Classificação */
+table.classificationTable {
+  margin-top: 20px;
+}
+
+table.classificationTable th {
+  background-color: #2e838c;
+}
+
+table.classificationTable td {
+  text-align: center;
+}
