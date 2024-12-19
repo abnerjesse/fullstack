@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Shirt Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="tshirtshopfull.js" refer></script>
+  </head>
+  <body>
+    <section class="form" id="formCart">
+      <h1>Gerenciar Pedido</h1>
+      <div class="input_cart_itens">
+        <div>
+          <label for="tshirtP">Quantidade P (R$ 10,00)</label>
+          <input type="number" id="tshirtP" name="tshirtP" />
+        </div>
+        <div>
+          <label for="tshirtM">Quantidade M (R$ 12,00)</label>
+          <input type="number" id="tshirtM" name="tshirtM" />
+        </div>
+        <div>
+          <label for="tshirtG">Quantidade G (R$ 15,00)</label>
+          <input type="number" id="tshirtG" name="tshirtG" />
+        </div>
+      </div>
+      <button class="btn" id="bntCalc">Salvar Pedido</button>
+    </section>
+    <section class="cart" id="printCart">
+      <div id="output-cart">
+        <table class="cart-table" id="cartList">
+          <thead>
+            <tr>
+              <th>P</th>
+              <th>M</th>
+              <th>G</th>
+              <th>Total</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="cart-total" id="cartTotal"></div>
+      </div>
+    </section>
+  </body>
+</html>
