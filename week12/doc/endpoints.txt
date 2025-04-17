@@ -1,0 +1,223 @@
+
+USUÁRIO
+
+1. Login
+Método: POST
+Path: /login
+
+Corpo da requisição:
+{
+  "email": "jao@gmail.com",
+  "senha": "123"
+}
+
+Corpo da resposta:
+{
+  "_id": "ObjectID(id)",
+  "perfil": "ObjectID(id)",
+  "email": "jao@gmail.com",
+  "token": "..."
+}
+
+---
+
+PERFIL
+
+1. Buscar últimos 5 perfis cadastrados
+Método: GET
+Path: /perfil
+
+Corpo da resposta:
+[
+  {
+    "nome": "Jão da Silva",
+    "dataNascimento": "2000-12-08",
+    "skills": ["Proativo", "JavaScript", "VueJs", "NodeJs"],
+    "disponibilidadeDeHorario": "Integral",
+    "disponibilidadeMudanca": true,
+    "educacao": [
+      {
+        "instituicao": "E.M. Doutor Zebrinha",
+        "ingresso": "2009-03-10",
+        "conclusao": "2014-12-10",
+        "nivelEscolaridade": "Ensino Fundamental"
+      }
+    ],
+    "certificacoes": [
+      {
+        "instituicao": "High Tech Cursos",
+        "titulo": "Curso Fábrica de Programador",
+        "cargaHoraria": 80
+      }
+    ],
+    "conexoes": ["ObjectID(id)", "ObjectID(id)", "ObjectID(id)"]
+  }
+]
+
+---
+
+2. Cadastro de perfil + usuário
+Método: POST
+Path: /perfil
+
+Corpo da requisição:
+{
+  "usuario": {
+    "email": "jao@gmail.com",
+    "senha": "123"
+  },
+  "nome": "Jão da Silva",
+  "dataNascimento": "2000-12-08",
+  "skills": ["Proativo", "JavaScript", "VueJs", "NodeJs"],
+  "disponibilidadeDeHorario": "Integral",
+  "disponibilidadeMudanca": true,
+  "educacao": {
+    "instituicao": "E.M. Doutor Zebrinha",
+    "ingresso": "2009-03-10",
+    "conclusao": "2014-12-10",
+    "nivelEscolaridade": "Ensino Fundamental"
+  },
+  "certificacoes": {
+    "instituicao": "High Tech Cursos",
+    "titulo": "Curso Fábrica de Programador",
+    "cargaHoraria": 80
+  }
+}
+
+Corpo da resposta:
+{
+  "_id": "ObjectID(id)",
+  "perfil": "ObjectID(id)",
+  "email": "jao@gmail.com",
+  "token": "..."
+}
+
+---
+
+3. Buscar perfil por ID
+Método: GET
+Path: /perfil/<id>
+Path Param: id do perfil
+Cabeçalho da Requisição:
+x-access-token: <token>
+
+Corpo da resposta:
+{
+  "nome": "Jão da Silva",
+  "dataNascimento": "2000-12-08",
+  "skills": ["Proativo", "JavaScript", "VueJs", "NodeJs"],
+  "disponibilidadeDeHorario": "Integral",
+  "disponibilidadeMudanca": true,
+  "educacao": {
+    "instituicao": "E.M. Doutor Zebrinha",
+    "ingresso": "2009-03-10",
+    "conclusao": "2014-12-10",
+    "nivelEscolaridade": "Ensino Fundamental"
+  },
+  "certificacoes": {
+    "instituicao": "High Tech Cursos",
+    "titulo": "Curso Fábrica de Programador",
+    "cargaHoraria": 80
+  }
+}
+
+---
+
+4. Atualizar perfil por ID
+Método: PUT
+Path: /perfil/<id>
+Path Param: id do perfil
+Cabeçalho da Requisição:
+x-access-token: <token>
+
+Corpo da resposta:
+{
+  "nome": "Jão da Silva",
+  "dataNascimento": "2000-12-08",
+  "skills": ["Proativo", "JavaScript", "VueJs", "NodeJs"],
+  "disponibilidadeDeHorario": "Integral",
+  "disponibilidadeMudanca": true,
+  "educacao": {
+    "instituicao": "E.M. Doutor Zebrinha",
+    "ingresso": "2009-03-10",
+    "conclusao": "2014-12-10",
+    "nivelEscolaridade": "Ensino Fundamental"
+  },
+  "certificacoes": {
+    "instituicao": "High Tech Cursos",
+    "titulo": "Curso Fábrica de Programador",
+    "cargaHoraria": 80
+  }
+}
+
+---
+
+BUSCA
+
+1. Busca filtrada
+Exemplo: /busca?skills=NodeJs,VueJs,Proativo&nome=Jão%20da%20Silva
+
+Método: GET
+Path: /busca
+Query String:
+    skills: String das skills de filtragem, separadas por vírgula
+    nome: String do nome para filtragem
+
+Corpo da resposta:
+[
+  {
+    "nome": "Jão da Silva",
+    "dataNascimento": "2000-12-08",
+    "skills": ["Proativo", "JavaScript", "VueJs", "NodeJs"],
+    "disponibilidadeDeHorario": "Integral",
+    "disponibilidadeMudanca": true,
+    "educacao": {
+      "instituicao": "E.M. Doutor Zebrinha",
+      "ingresso": "2009-03-10",
+      "conclusao": "2014-12-10",
+      "nivelEscolaridade": "Ensino Fundamental"
+    },
+    "certificacoes": {
+      "instituicao": "High Tech Cursos",
+      "titulo": "Curso Fábrica de Programador",
+      "cargaHoraria": 80
+    }
+  }
+]
+
+---
+
+NOTIFICAÇÕES
+
+1. Cadastro de notificação
+Método: POST
+Path: /notificacao
+Cabeçalho da Requisição:
+x-access-token: <token>
+
+Corpo da requisição:
+{
+  "tipo": "Solicitação de Amizade",
+  "titulo": "Solicitação de Amizade",
+  "descricao": "Olá Fulano, gostaria de fazer parte do meu network?",
+  "destinatario": "ObjectID(id)",
+  "remetente": "ObjectID(id)"
+}
+
+---
+
+2. Marcar notificação como lida
+Método: PUT
+Path: /notificacao/lida/<id>
+Cabeçalho da Requisição:
+x-access-token: <token>
+
+Corpo da resposta:
+{
+  "tipo": "Solicitação de Amizade",
+  "titulo": "Solicitação de Amizade",
+  "descricao": "Olá Fulano, gostaria de fazer parte do meu network?",
+  "destinatario": "ObjectID(id)",
+  "remetente": "ObjectID(id)",
+  "lida": true
+}
