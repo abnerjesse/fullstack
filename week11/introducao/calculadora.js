@@ -1,3 +1,4 @@
+//A parte de baixo é referente a aula sobre modularização (week11-aula3).
 module.exports = {
     add(n1, n2) {
         return n1 + n2
@@ -19,7 +20,7 @@ module.exports = {
 
 
 
-
+//A parte de baixo é referente a aula inicial (week11-aula2), criando uma calculadora, as funções básicas com execução.
 
 // function add(n1, n2) {
 //     return n1 + n2
