@@ -1,5 +1,5 @@
-const db = require('mongoose')
-db.connect('mongodb+srv://abnerjesse:<db_password>@<db_address>/?retryWrites=true&w=majority&appName=ajdbhightech')
+const db = require('./db')
+db.connect()
 
 const perfilRoute = require('./routes/PerfilRoute')
 const notificacaoRoute = require('./routes/NotificacaoRoute')

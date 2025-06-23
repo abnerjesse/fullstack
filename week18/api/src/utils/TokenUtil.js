@@ -1,23 +1,26 @@
-module.exports = {
-    verificarToken: (request) => {
-        let token = request.headers['token']
+require('dotenv').config()
+const jwt = require('jsonwebtoken')
 
-        if (!token) {
-            return {
-                autorizado: false,
-                message: "Erro ao acessar recurso. Token não informado!"
+module.exports = {
+    gerarToken: (usuario) => {
+        try {
+            return jwt.sign(usuario, process.env.SECRET)
+        } catch (error) {
+            console.log(`ERRO: ${error.message}`);
+            throw {
+                status: 500,
+                message: 'Erro ao gerar token'
             }
-        } else {
-            if (token == "TokenSecreto") {
-                return {
-                    autorizado: true,
-                    message: ""
-                }
-            } else {
-                return {
-                    autorizado: false,
-                    message: "Erro ao acessar recurso. Token não inválido!"
-                }
+        }
+    },
+    verificarToken: (token) => {
+        try {
+            return jwt.verify(token, process.env.SECRET)
+        } catch (error) {
+            console.log(`ERRO: ${error.message}`);
+            throw {
+                status: 401,
+                message: 'Token inválido'
             }
         }
     }

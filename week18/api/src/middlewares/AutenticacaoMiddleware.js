@@ -1,14 +1,22 @@
-const tokenUtil = require('../utils/TokenUtil')
+const tokenUtil = require('./../utils/TokenUtil')
 
 module.exports = {
     verificar: (req, res, next) => {
-        const resultado = tokenUtil.verificarToken(req)
-        if (resultado.autorizado) {
-            next()
-        } else {
-            res.status(401).json({
-                message: resultado.message
+        const token = req.headers.token
+
+        if (!token) {
+            return res.status(401).json({
+                message: 'Token não informado'
             })
+        } else {
+            try {
+                tokenUtil.verificarToken(token)
+                next()
+            } catch (error) {
+                res.status(error.status).json({
+                    message: error.message
+                })
+            }
         }
     }
 }
