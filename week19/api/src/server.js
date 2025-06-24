@@ -5,9 +5,13 @@ const perfilRoute = require('./routes/PerfilRoute')
 const notificacaoRoute = require('./routes/NotificacaoRoute')
 const loginRoute = require('./routes/LoginRoute')
 
+const cors = require('cors')
 const express = require('express')
 const api = express()
 api.use(express.json())
+api.use(cors({
+    origin: '*'
+}))
 
 api.use('/perfil', perfilRoute)
 api.use('/notificacao', notificacaoRoute)
