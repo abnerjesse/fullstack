@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ tittle }}</h1>
+
+      <div>
+        <input
+          type="text"
+          v-model="tittle"
+          name=""
+          id="inputTittle"
+          placeholder="Digite o título da página aqui!"
+        />
+        <br />
+        <input
+          v-model="passwd"
+          :type="typePasswd"
+          id="inputPasswd"
+          placeholder="Digite sua senha!"
+        />
+        <br />
+        <button @click="showPasswd">{{ button }}</button>
+      </div>
+
+      <div>
+        <input
+          v-model="nomeCliente"
+          type="text"
+          placeholder="Digite o nome do cliente!"
+        />
+        <input
+          v-model="idadeCliente"
+          type="text"
+          placeholder="Digite a idade do cliente!"
+        />
+        <br />
+        <button @click="addClient" type="submit">Adicionar</button>
+      </div>
+
+      <div>
+        <p v-for="c in clientes" :key="c">{{ c }}</p>
+      </div>
+
+      <section>
+        <div v-for="(c, index) in clientes" :key="c">
+          <span>{{ c.nome }}</span>
+          <button @click="removeClient(index)">Remover</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            tittle: "Introdução ao VueJS",
+            passwd: "",
+            typePasswd: "password",
+            button: "Mostrar senha",
+            clientes: [
+              { nome: "João", idade: 20 },
+              { nome: "Maria", idade: 25 },
+              { nome: "José", idade: 30 },
+            ],
+            nomeCliente: "",
+          };
+        },
+        methods: {
+          updateTittle() {
+            this.tittle = document.getElementById("inputTittle").value;
+          },
+          showPasswd() {
+            if (this.typePasswd == "password") {
+              this.typePasswd = "text";
+              this.button = "Esconder senha";
+            } else {
+              this.typePasswd = "password";
+              this.button = "Mostrar senha";
+            }
+          },
+          addClient() {
+            this.clientes.push({
+              nome: this.nomeCliente,
+              idade: this.idadeCliente,
+            });
+            this.nomeCliente = "";
+            this.idadeCliente = "";
+          },
+          removeClient(i) {
+            this.clientes.splice(i, 1);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
