@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ tittle }}</h1>
+      <input
+        type="text"
+        v-model="tittle"
+        name=""
+        id="inputTittle"
+        placeholder="Digite o título da página aqui!"
+      />
+      <br />
+      <input
+        v-model="passwd"
+        :type="typePasswd"
+        id="inputPasswd"
+        placeholder="Digite sua senha!"
+      />
+      <br />
+      <button @click="showPasswd">{{ button }}</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            tittle: "Introdução ao VueJS",
+            passwd: "",
+            typePasswd: "password",
+            button: "Mostrar senha",
+          };
+        },
+        methods: {
+          updateTittle() {
+            this.tittle = document.getElementById("inputTittle").value;
+          },
+          showPasswd() {
+            if (this.typePasswd == "password") {
+              this.typePasswd = "text";
+              this.button = "Esconder senha";
+            } else {
+              this.typePasswd = "password";
+              this.button = "Mostrar senha";
+            }
+          },
+        },
+      }).mount("#app");
+    </script>
+
+    <!-- <h1 id="tittle">Introdução ao VueJS</h1>
+
+    <input
+      type="text"
+      name=""
+      id="inputTittle"
+      oninput="updateTittle()"
+      placeholder="Digite o título da página aqui!"
+    />
+
+    <script>
+      let tittle = "Introdução ao VueJS";
+
+      function updateTittle() {
+        tittle = document.getElementById("inputTittle").value;
+        document.getElementById("tittle").innerText = tittle;
+      }
+    </script> -->
+  </body>
+</html>
