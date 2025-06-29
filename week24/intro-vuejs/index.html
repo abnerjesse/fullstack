@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ title }}</h1>
+
+      <div>
+        <input
+          type="text"
+          v-model="title"
+          name=""
+          id="inputTitle"
+          placeholder="Digite o título da página aqui!"
+        />
+        <br />
+        <input
+          v-model="passwd"
+          :type="typePasswd"
+          id="inputPasswd"
+          placeholder="Digite sua senha!"
+        />
+        <br />
+        <button @click="showPasswd">{{ button }}</button>
+      </div>
+
+      <div>
+        <input
+          v-model="nomeCliente"
+          type="text"
+          placeholder="Digite o nome do cliente!"
+        />
+        <input
+          v-model="idadeCliente"
+          type="text"
+          placeholder="Digite a idade do cliente!"
+        />
+        <br />
+        <button @click="addClient" type="submit">Adicionar</button>
+      </div>
+
+      <div>
+        <p v-for="c in clientes" :key="c">{{ c }}</p>
+      </div>
+
+      <section>
+        <div v-for="(c, index) in clientes" :key="c">
+          <span>{{ c.nome }}</span>
+          <button @click="removeClient(index)">Remover</button>
+        </div>
+      </section>
+
+      <app-btn text="Uva" @clicked="btnClicked"></app-btn>
+      <app-btn text="Manga" @clicked="btnClicked"></app-btn>
+      <app-btn text="Abacaxi" @clicked="btnClicked"></app-btn>
+      <app-btn text="Laranja"></app-btn>
+      <app-btn @clicked="btnClicked"></app-btn>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
