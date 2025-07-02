@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt')
-const perfilModel = require('./../models/Perfil')
+const perfilModel = require('../models/Perfil')
 
 module.exports = {
     buscarUltimos: async () => {

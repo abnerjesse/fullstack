@@ -1,4 +1,4 @@
-const notificacaoModel = require('./../models/Notificacao')
+const notificacaoModel = require('../models/Notificacao')
 
 module.exports = {
     buscarPorId: async (id) => {

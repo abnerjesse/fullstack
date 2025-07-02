@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const loginService = require('./../services/LoginService')
+const loginService = require('../services/LoginService')
 
 //Rotas de Login
 router.post('', async (req, res) => {

@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-const { verificar } = require('./../middlewares/AutenticacaoMiddleware')
-const notificacaoService = require('./../services/NotificacaoService')
+const { verificar } = require('../middlewares/AutenticacaoMiddleware')
+const notificacaoService = require('../services/NotificacaoService')
 
 //Rotas de Notificacao
 router.get('/:id', verificar, async (req, res) => {

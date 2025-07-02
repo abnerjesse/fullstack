@@ -1,4 +1,4 @@
-const tokenUtil = require('./../utils/TokenUtil')
+const tokenUtil = require('../utils/TokenUtil')
 
 module.exports = {
     verificar: (req, res, next) => {

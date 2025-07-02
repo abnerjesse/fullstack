@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-const { verificar } = require('./../middlewares/AutenticacaoMiddleware')
-const perfilService = require('./../services/PerfilService')
+const { verificar } = require('../middlewares/AutenticacaoMiddleware')
+const perfilService = require('../services/PerfilService')
 
 //Rotas de Perfil
 router.get('', async (req, res) => {

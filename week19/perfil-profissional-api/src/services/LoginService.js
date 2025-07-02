@@ -1,5 +1,5 @@
-const perfilModel = require('./../models/Perfil')
-const tokenUtil = require('./../utils/TokenUtil')
+const perfilModel = require('../models/Perfil')
+const tokenUtil = require('../utils/TokenUtil')
 const bcrypt = require('bcrypt')
 
 module.exports = {

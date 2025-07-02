@@ -4,7 +4,7 @@ Projeto 'Perfil Profissional', implementado no módulo 2 do curso Fábrica de Pr
 
 Este projeto implementa uma **API** em **NodeJS**, utilizando _Express_ como gerenciador de requisições **HTTP**, banco de dados não relacional **MongoDB** e o framework ODM **Mongoose** para intermediar a comunicação entre a aplicação e o banco de dados.
 
-O projeto trata-se de uma aplicação de gerenciamento de perfis profissionais e conexões entre eles. Portato é possível cadastrar perfis, conectar perfis e a comunicação entre perfis por meio de notificações.
+O projeto trata-se de uma aplicação de gerenciamento de perfis profissionais e conexões entre eles. Portanto é possível cadastrar perfis, conectar perfis e a comunicação entre perfis por meio de notificações.
 
 Este documento tem por objetivo detalhar os elementos presentes no projeto do Perfil Profissional, incluindo dependências, _scripts_ de execução, definição de entidades e _endpoints_.
 
