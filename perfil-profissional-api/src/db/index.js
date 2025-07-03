@@ -8,6 +8,7 @@ let db
 
 module.exports = {
     connect: async () => {
+        // console.log(`Tentando comunicar com banco: ${URI}`)
         db = await mongoose.connect(URI)
         console.log('Conectado ao MongoDB!')
     },
