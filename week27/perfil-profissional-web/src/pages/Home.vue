@@ -1,6 +1,6 @@
 <template>
     <h1>Home</h1>
-    <h2>Olá, {{ userLogged.email }}!</h2>
+    <h2>Olá, {{ userLogged.nome }}!</h2>
 
     <section>
         <h3>Últimas notificações</h3>
