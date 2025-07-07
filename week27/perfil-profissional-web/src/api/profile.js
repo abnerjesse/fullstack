@@ -8,3 +8,7 @@ const api = mande(
 export function createProfileApi(profile) {
   return api.post(profile);
 }
+
+export function getProfileApi() {
+  return api.get();
+}

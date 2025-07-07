@@ -1,14 +1,15 @@
 import { defineStore } from "pinia";
 import { loginApi } from "../api/login";
-import { createProfileApi } from "../api/profile";
+import { createProfileApi, getProfileApi } from "../api/profile";
 
 export const useProfileStore = defineStore("profile", {
   state: () => ({
     userLogged: {},
+    lastsProfiles: [],
   }),
   actions: {
     async login(user) {
-      await loginApi(user);
+      this.userLogged = await loginApi(user);
 
       //   return new Promise((resolve, reject) => {
       //     console.log("Clicou no login...");
@@ -26,6 +27,9 @@ export const useProfileStore = defineStore("profile", {
     },
     async createProfile(profile) {
       await createProfileApi(profile);
+    },
+    async getProfiles() {
+      this.lastsProfiles = await getProfileApi();
     },
   },
 });
