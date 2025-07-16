@@ -1,12 +1,9 @@
 import { mande } from "mande";
 import { useProfileStore } from "../stores/profileStore";
 
-const notification = mande(
-  "https://perfil-profissional-api-c2c0b9c521b8.herokuapp.com/notificacao",
-  {}
-);
+const notification = mande("http://localhost:3000/notificacao", {});
 const profileNotification = mande(
-  "https://perfil-profissional-api-c2c0b9c521b8.herokuapp.com/notificacao/perfil",
+  "http://localhost:3000/notificacao/perfil",
   {}
 );
 

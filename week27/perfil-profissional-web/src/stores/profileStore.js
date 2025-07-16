@@ -1,6 +1,11 @@
 import { defineStore } from "pinia";
 import { loginApi } from "../api/login";
-import { createProfileApi, getProfileApi } from "../api/profile";
+import {
+  createProfileApi,
+  getProfileApi,
+  getProfileByIdApi,
+  updateProfileApi,
+} from "../api/profile";
 
 export const useProfileStore = defineStore("profile", {
   state: () => ({
@@ -30,6 +35,12 @@ export const useProfileStore = defineStore("profile", {
     },
     async getProfiles() {
       this.lastsProfiles = await getProfileApi();
+    },
+    async getProfileById() {
+      return await getProfileByIdApi(this.userLogged.id);
+    },
+    async updateProfile(profile) {
+      return await updateProfileApi(profile);
     },
   },
 });

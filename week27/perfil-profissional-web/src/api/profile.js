@@ -1,14 +1,26 @@
 import { mande } from "mande";
+import { useProfileStore } from "../stores/profileStore";
 
-const api = mande(
-  "https://perfil-profissional-api-c2c0b9c521b8.herokuapp.com/perfil",
-  {}
-);
+const profileApi = mande("http://localhost:3000/perfil", {});
+
+function setToken() {
+  const store = useProfileStore();
+  profileApi.options.headers.token = store.userLogged.token;
+}
 
 export function createProfileApi(profile) {
-  return api.post(profile);
+  return profileApi.post(profile);
 }
 
 export function getProfileApi() {
-  return api.get();
+  return profileApi.get();
+}
+
+export function getProfileByIdApi(profileId) {
+  return profileApi.get(profileId);
+}
+
+export function updateProfileApi(profile) {
+  setToken();
+  return profileApi.put(profile._id, profile);
 }
