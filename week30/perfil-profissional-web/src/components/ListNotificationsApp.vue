@@ -1,9 +1,11 @@
 <template>
     <table>
         <thead>
-            <th>Tipo</th>
-            <th>Título</th>
-            <th>Lida</th>
+            <tr>
+                <th>Tipo</th>
+                <th>Título</th>
+                <th>Lida</th>
+            </tr>
         </thead>
         <tbody>
             <tr v-for="notification in notifications">

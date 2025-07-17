@@ -1,9 +1,11 @@
 <template>
     <table>
         <thead>
-            <th>Email</th>
-            <th>Disponibilidade de Mudança</th>
-            <th>Disponibilidade de Horário</th>
+            <tr>
+                <th>Email</th>
+                <th>Disponibilidade de Mudança</th>
+                <th>Disponibilidade de Horário</th>
+            </tr>
         </thead>
         <tbody>
             <tr v-for="profile in lastsProfiles">
